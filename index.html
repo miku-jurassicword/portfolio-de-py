@@ -3,69 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biblioteca Python</title>
+<title>Meu Portfólio Dev</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
 body{
-    background:#0d1117;
+    background:#0a0a0a;
     color:white;
-    font-family:Arial,sans-serif;
-    padding:20px;
 }
 
-h1{
+header{
     text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(135deg,#00fff7,#003b46);
 }
 
-.codigo{
-    background:#161b22;
-    border:1px solid #30363d;
-    border-radius:10px;
-    margin:20px 0;
-    overflow:hidden;
+header h1{
+    font-size:3rem;
 }
 
-.titulo{
-    background:#21262d;
+header p{
+    margin-top:10px;
+    opacity:.8;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
     padding:15px;
+    background:#111;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:#00fff7;
+    text-decoration:none;
     font-weight:bold;
 }
 
-pre{
-    margin:0;
+nav a:hover{
+    color:white;
+}
+
+section{
+    padding:50px 10%;
+}
+
+.titulo{
+    color:#00fff7;
+    margin-bottom:20px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#151515;
+    border:2px solid #00fff7;
+    border-radius:15px;
     padding:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00fff777;
+}
+
+.card h3{
+    color:#00fff7;
+    margin-bottom:10px;
+}
+
+.botao{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#00fff7;
+    color:black;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.botao:hover{
+    background:white;
+}
+
+.codigo{
+    background:#0f0f0f;
+    border-left:4px solid #00fff7;
+    padding:15px;
+    border-radius:10px;
     overflow:auto;
 }
 
-code{
-    color:#58a6ff;
+pre{
+    white-space:pre-wrap;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    margin-top:50px;
 }
 </style>
 </head>
 <body>
 
-<h1>🐍 Minha Biblioteca Python</h1>
+<header>
+    <h1>💙 Meu Portfólio Dev</h1>
+    <p>Projetos, códigos e links pessoais</p>
+</header>
 
-<div class="codigo">
-    <div class="titulo">Calculadora.py</div>
-    <pre><code>
-num1 = float(input("Número 1: "))
-num2 = float(input("Número 2: "))
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#codigos">Códigos</a>
+    <a href="#links">Links</a>
+</nav>
 
-print(num1 + num2)
-    </code></pre>
-</div>
+<section id="sobre">
+    <h2 class="titulo">👤 Sobre Mim</h2>
+    <p>
+        Escreva aqui sua descrição.
+    </p>
+</section>
 
-<div class="codigo">
-    <div class="titulo">Forca.py</div>
-    <pre><code>
-palavra = "python"
+<section id="projetos">
+    <h2 class="titulo">🚀 Projetos</h2>
 
-while True:
-    letra = input("Digite uma letra: ")
-    print(letra)
-    </code></pre>
-</div>
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Nome do Projeto</h3>
+            <p>Descrição do projeto.</p>
+            <a href="#" class="botao">Abrir</a>
+        </div>
+
+        <div class="card">
+            <h3>Outro Projeto</h3>
+            <p>Descrição do projeto.</p>
+            <a href="#" class="botao">Abrir</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="codigos">
+    <h2 class="titulo">💻 Meus Códigos</h2>
+
+    <div class="codigo">
+<pre>
+# Cole seu código Python aqui
+
+print("Olá Mundo")
+</pre>
+    </div>
+
+    <br>
+
+    <div class="codigo">
+<pre>
+// Cole seu JavaScript aqui
+
+console.log("Olá Mundo");
+</pre>
+    </div>
+
+</section>
+
+<section id="links">
+    <h2 class="titulo">🔗 Meus Links</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>GitHub</h3>
+            <a href="#" class="botao">Acessar</a>
+        </div>
+
+        <div class="card">
+            <h3>Site</h3>
+            <a href="#" class="botao">Acessar</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 - Seu Nome
+</footer>
 
 </body>
 </html>
