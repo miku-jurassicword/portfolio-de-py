@@ -3,107 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio Python</title>
+<title>Biblioteca Python</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
 body{
-    background:#0f1117;
+    background:#0d1117;
     color:white;
-    padding:30px;
-}
-
-header{
-    text-align:center;
-    margin-bottom:40px;
+    font-family:Arial,sans-serif;
+    padding:20px;
 }
 
 h1{
-    color:#4da6ff;
+    text-align:center;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+.codigo{
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:10px;
+    margin:20px 0;
+    overflow:hidden;
 }
 
-.card{
-    background:#1b1f2b;
-    border:1px solid #2d3447;
-    border-radius:15px;
+.titulo{
+    background:#21262d;
+    padding:15px;
+    font-weight:bold;
+}
+
+pre{
+    margin:0;
     padding:20px;
-    transition:0.3s;
+    overflow:auto;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#4da6ff;
-}
-
-.card h2{
-    color:#4da6ff;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#bdbdbd;
-    margin-bottom:15px;
-}
-
-.botao{
-    display:inline-block;
-    background:#4da6ff;
-    color:white;
-    text-decoration:none;
-    padding:10px 15px;
-    border-radius:8px;
-}
-
-.botao:hover{
-    background:#2d8cff;
+code{
+    color:#58a6ff;
 }
 </style>
 </head>
 <body>
 
-<header>
-    <h1>🐍 Meu Portfólio Python</h1>
-    <p>Biblioteca de projetos e scripts</p>
-</header>
+<h1>🐍 Minha Biblioteca Python</h1>
 
-<div class="grid">
+<div class="codigo">
+    <div class="titulo">Calculadora.py</div>
+    <pre><code>
+num1 = float(input("Número 1: "))
+num2 = float(input("Número 2: "))
 
-    <div class="card">
-        <h2>Calculadora</h2>
-        <p>Calculadora simples feita em Python.</p>
-        <a href="codigos/calculadora.py" class="botao" target="_blank">
-            Ver Código
-        </a>
-    </div>
+print(num1 + num2)
+    </code></pre>
+</div>
 
-    <div class="card">
-        <h2>Jogo da Forca</h2>
-        <p>Projeto de terminal usando listas e funções.</p>
-        <a href="codigos/forca.py" class="botao" target="_blank">
-            Ver Código
-        </a>
-    </div>
+<div class="codigo">
+    <div class="titulo">Forca.py</div>
+    <pre><code>
+palavra = "python"
 
-    <div class="card">
-        <h2>Gerador de Senhas</h2>
-        <p>Cria senhas aleatórias seguras.</p>
-        <a href="codigos/senhas.py" class="botao" target="_blank">
-            Ver Código
-        </a>
-    </div>
-
+while True:
+    letra = input("Digite uma letra: ")
+    print(letra)
+    </code></pre>
 </div>
 
 </body>
